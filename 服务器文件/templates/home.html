@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head><title> :) </title>
+<style>
+#header {
+    background: url("{%static "images/henfu.png"%}");
+    background-size:100% 100%;
+    color: #ffffff;
+    text-align:center;
+    height:10%;
+    padding:10px;
+}
+
+#navl {
+    background-color: #000000;
+    height:60%;
+    width: 10%;
+    float:left;
+    text-align:center;
+}
+#navr {
+    background-color: #ffffff;
+    border: ridge;
+    height: 60%;
+    width: 10%;
+    float: right;
+    text-align:center;
+}
+#section {
+    background: url("{%static "images/yuzhou.png"%}");
+    background-size:100% 100%;
+    color: #7085ec;
+    width:80%;
+    height:50%;
+    float:left;
+}
+#footer {
+    background-color: #36ff4e;
+    color: #000000;
+    clear:both;
+    text-align:center;
+    height:10%;
+    padding:10px;
+}
+</style>
+</head>
+<body>
+<div id="header" >
+<h1 >GYH Blog
+    <a href="/information">
+        <img src="{%static "images/head.png"%}" align="center" width="30" height="30"/></a>
+</h1>
+</div>
+
+<div id="navl"><nav>
+    <br>
+    <li><a href="https://github.com" >
+        <img src="{%static "images/github.png"%}"  width="50" height="50"/></a><br><br><br>
+    </li>
+    <li><a href="https://leetcode.com/">
+        <img src="{%static "images/leetcode.png"%}"  width="50" height="50"/></a><br><br><br>
+    </li>
+    <li><a href="http://www.cplusplus.com/">
+        <img src="{%static "images/cpp.png"%}"  width="50" height="50"/></a><br><br><br>
+    </li>
+    <li><a href="http://cnki.net/">
+        <img src="{%static "images/cnki.png"%}"  width="50" height="50"/></a><br><br><br>
+    </li>
+    <li><a href="http://cn.bing.com/?mkt=zh-CN">
+        <img src="{%static "images/bing.png"%}"  width="50" height="50"/></a><br><br><br>
+    </li>
+    {#    <img src="{%static "gif/1.png"%}"  width="50" height="50"/></a><br><br>#}
+</nav>
+</div>
+<div id="navr">
+    <br>
+    <a href="https://github.com" >
+        <img src="{%static "images/github.png"%}"  width="50" height="50"/></a><br><br><br>
+    <a href="https://leetcode.com/">
+        <img src="{%static "images/leetcode.png"%}"  width="50" height="50"/></a><br><br><br>
+    <a href="http://www.cplusplus.com/">
+        <img src="{%static "images/cpp.png"%}"  width="50" height="50"/></a><br><br><br>
+    <a href="http://cnki.net/">
+        <img src="{%static "images/cnki.png"%}"  width="50" height="50"/></a><br><br><br>
+    <a href="http://cn.bing.com/?mkt=zh-CN">
+        <img src="{%static "images/bing.png"%}"  width="50" height="50"/></a><br><br><br>
+    {#    <img src="{%static "gif/1.png"%}"  width="50" height="50"/></a><br><br>#}
+</div>
+<div id="section">
+</div>
+<div  id="footer">
+Copyright by YiHui Gan @ 2017-2018
+</div>
+
+</body>
+</html>

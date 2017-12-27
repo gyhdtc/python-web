@@ -1,25 +1,32 @@
 <!DOCTYPE html>
+{% load static %}
     <html>
     <head><title> :) </title></head>
     <body>
-    <h2 style="FONT-SIZE: 20pt">G Y H<br/>
-        {% load static %}
-        <img src="{%static "images/my.png"%}" width="150" height="150"/></h2>
+    <h2 style="FONT-SIZE: 40pt" align="center">
+        G Y H<br/>
+        <img src="{%static "images/my.png"%}" width="180" height="180" align="center"/>
+    </h2>
     <hr>
-    <p style="FONT-SIZE: 15pt" color=#ffffff0>Personal information<p/>
+    <p style="FONT-SIZE: 30pt" align="center">
+        ---Personal Information---
+    <p/>
     <hr>
-    <p>
-    Country&nbsp&nbsp&nbsp&nbsp:&nbspChina <br/>
-        {% load static %}
-        <img src="{%static "images/china.png"%}"width="180" height="120" ><br/><br/><br/>
-    University&nbsp:&nbspNCU <br/>
-        {% load static %}
-        <img src="{%static "images/ncu.png"%}" /><br/><br/><br/>
-    Wechat&nbsp&nbsp&nbsp&nbsp&nbsp:&nbspgyhdtc<br/><br/><br/>
+    <p style="FONT-SIZE: 30pt" align="center">
+        Country : China <br/>
+        <img src="{%static "images/china.png"%}"width="180" height="180" />
+        <br/>
+        University : NCU<br/>
+        <img src="{%static "images/ncu.png"%}" width="180" height="180"/>
+        <br/>
+        Wechat : gyhdtc <br/>
+        <img src="{%static "images/wechat.png"%}" width="180" height="180"/>
+        <br/>
     </p>
-    <p>
-    This website will be completed by  &nbspDjango&nbsp&nbsp+&nbsp&nbspNginx&nbsp&nbsp+&nbsp&nbspUwsgi<br/>
-    YiHui Gan @ 2017-2018
+    <hr>
+    <p align="center">
+    This website will be completed by Django + Nginx <br/>
+    Copyright by YiHui Gan @ 2017-2018
     </p>
     </body>
     </html>

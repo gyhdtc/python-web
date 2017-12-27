@@ -5,7 +5,8 @@
       <paths name="gyhweb">
         <serverdata>
           <mappings>
-            <mapping deploy="/home/gyhweb/zwh2" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/webapp/gyh/zwh2" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/webapp/gyh/face" local="$PROJECT_DIR$/../face" web="/" />
           </mappings>
         </serverdata>
       </paths>
