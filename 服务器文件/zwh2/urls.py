@@ -15,14 +15,16 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from mysite.views import home,hello,index,lost
+from mysite import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
-    url(r'^$', index),
-    url(r'^information/', hello),
-    # url(r'^123/', index),
-    url(r'^lostpassword/', lost),
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', views.index),
+    url(r'^lostpassword/', views.lost),
+    url(r'^hello/',views.hello),
+    url(r'^logup/',views.logup),
+    url(r'^login/',views.login),
+    url(r'^code/',views.code),
+    url(r'^admin/',include(admin.site.urls)),
 ]
 urlpatterns += staticfiles_urlpatterns()

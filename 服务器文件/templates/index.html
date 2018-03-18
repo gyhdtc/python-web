@@ -3,7 +3,7 @@
 {% load static %}
 <html lang="en">
 <head>
-<title>Space Login Form Flat Responsive Widget Template :: w3layouts</title>
+<title>:)</title>
 
 <!-- Meta tag Keywords -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,25 +26,31 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<!-- main -->
 	<div class="main">
 		<div class="main-w3l">
-			<h1 class="logo-w3">Space Login Form</h1>
+			<h1 class="logo-w3">Welcome to here</h1>
 			<div class="w3layouts-main">
 				<h2><span>Login now</span></h2>
 				<div class="social">
 					<a href="/lostpassword">Login With Wechat</a>
 				</div>
 					<h3>(or)</h3>
-					<form action="#" method="post">
-						<input placeholder="Username or Email" name="Email" type="email" required="">
-						<input placeholder="Password" name="Password" type="password" required="">
-						<input type="submit" value="Get Started" name="login">
-					</form>
+				<form action="/hello/">
+                        <input type="submit" value="注册" name="Logup">
+                    </form>
+
+                <form action="/login/" method="post">
+                    {% csrf_token %}
+						<input placeholder="Username or Email" name="email" type="email" required="">
+						<input placeholder="Password" name="password" type="password" required=""><br/>
+                    <a style="FONT-SIZE: 15pt;color: #fff9ff"> {{ message }}</a><br/>
+						<input type="submit" value="登陆" name="Login">
+                </form>
 					<h6><a href="/lostpassword">Lost Your Password?</a></h6>
 			</div>
 			<!-- //main -->
-			
+
 			<!--footer-->
 			<div class="footer-w3l">
-				<p>&copy; 2017-2018 Space Login Form. All rights reserved | Design by <a href="/information">GYH</a></p>
+				<p>&copy; 2017-2018 Space Login Form. All rights reserved | Design by <a href="/hello">GYH</a></p>
 			</div>
 			<!--//footer-->
 		</div>
