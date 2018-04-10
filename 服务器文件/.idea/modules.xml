@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../face/.idea/face.iml" filepath="$PROJECT_DIR$/../face/.idea/face.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/btts_57_clean-blog/btts_57_clean-blog/.idea/btts_57_clean-blog.iml" filepath="$USER_HOME$/Desktop/btts_57_clean-blog/btts_57_clean-blog/.idea/btts_57_clean-blog.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/btts_57_clean-blog/.idea/btts_57_clean-blog.iml" filepath="$USER_HOME$/Desktop/btts_57_clean-blog/.idea/btts_57_clean-blog.iml" />
+      <module fileurl="file://E:/face/.idea/face.iml" filepath="E:/face/.idea/face.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/ft5_71_story/.idea/ft5_71_story.iml" filepath="$USER_HOME$/Desktop/ft5_71_story/.idea/ft5_71_story.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/twts_3_ev/.idea/twts_3_ev.iml" filepath="$USER_HOME$/Desktop/twts_3_ev/.idea/twts_3_ev.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/zwh2.iml" filepath="$PROJECT_DIR$/.idea/zwh2.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/个人博客模板古典系列之江南墨画/.idea/个人博客模板古典系列之江南墨画.iml" filepath="$USER_HOME$/Desktop/个人博客模板古典系列之江南墨画/.idea/个人博客模板古典系列之江南墨画.iml" />
     </modules>
   </component>
 </project>

@@ -5,3 +5,8 @@ class Post(models.Model):
 	user_id = models.CharField(max_length=10,default='')
 	user_email = models.EmailField(max_length=30,default='')
 	user_password = models.CharField(max_length=20,default='')
+class Blog(models.Model):
+	id = models.AutoField(primary_key=True)
+	title = models.CharField(max_length=30,default='')
+	body = models.TextField()
+	pub_date = models.DateField()

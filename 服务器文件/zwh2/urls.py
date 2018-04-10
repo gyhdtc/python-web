@@ -20,6 +20,14 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     url(r'^$', views.index),
+    url(r'^blog/', views.blog),
+    url(r'^about/', views.about),
+    url(r'^contact', views.contact),
+    url(r'^fullwidth', views.fullwidth),
+    url(r'^single', views.single),
+    url(r'^write', views.write),
+    url(r'^article/([0-9]+)', views.article),
+
     url(r'^lostpassword/', views.lost),
     url(r'^hello/',views.hello),
     url(r'^logup/',views.logup),

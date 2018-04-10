@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 from django.shortcuts import render
-from mysite.models import Post
+from mysite.models import Post,Blog
 from mysite.code import randomcode
 from mysite.sendemail import sendemail
 
@@ -17,6 +17,27 @@ def lost(request):#功能未开发
 
 def hello(request):#
     return render(request, 'hello.html')
+
+def blog(request):#
+    return render(request, 'blog.html')
+
+def about(request):#
+    return render(request, 'about.html')
+
+def contact(request):#
+    return render(request, 'contact.html')
+
+def fullwidth(request):#
+    return render(request, 'full-width.html')
+
+def single(request):#
+    return render(request, 'single.html')
+
+def write(request):#
+    return render(request, 'write.html')
+
+def article(request,id):#
+    return render(request, 'write.html')
 
 def logup(request):#注册+个人信息
     request.encoding = 'utf-8'
