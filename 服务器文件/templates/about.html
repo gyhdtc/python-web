@@ -1,116 +1,123 @@
 <!DOCTYPE html>
 {% load static %}
 <html>
-	<head>
-		<title>:)</title>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+    <title>:)</title>
+    <!-- BOOTSTRAP CORE STYLE -->
+    <link href="{% static "assets/css/bootstrap.css" %}" rel="stylesheet" />
+    <!-- FONT AWESOME ICON STYLE -->
+    <link href="{% static "assets/css/font-awesome.css" %}" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="{% static "assets/css/style.css" %}" rel="stylesheet" />
+</head>
+<body>
+    <div id="header2">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 logo-div">
+                        <div class="logo-inner text-center">
+                            <div class="logo-name">
+                                <a href="blog.html">
+                                    <img src="{% static "assets/img/realme.jpg" %}" class="img-circle" />
+                                </a>
+                            </div>
 
-		<!-- meta -->
-		<meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
+                        </div>
 
-	    <!-- css -->
-		<link rel="stylesheet" href="{%static "css/bootstrap.min.css" %}">
-		<link rel="stylesheet" href="{%static "css/ionicons.min.css" %}">
-		<link rel="stylesheet" href="{%static "css/pace.css" %}">
-	    <link rel="stylesheet" href="{%static "css/custom.css" %}">
+                    </div>
+                    <div class="col-md-8 header-text-top " id="about" style="color: black">
+                        <h1><a href="/blog/">welcome - about me!</a></h1>
+						个人介绍。<br />
+                        <br />
+                        <h2><strong>我是谁 ?</strong></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END HEADER SECTION-->
+    <div class="info-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    Say hello to me at <strong>gyh108wy</strong>@163.com
+                </div>
+                <div class="col-md-2">
+                    <div class="social-link">
+                        <a href="#" class="btn btn-default btn-xs"><i class="fa fa-facebook fa-2x"></i></a>
+                        <a href="#" class="btn btn-default btn-xs"><i class="fa fa-linkedin fa-2x"></i></a>
+                        <a href="#" class="btn btn-default btn-xs"><i class="fa fa-google-plus fa-2x"></i></a>
+                    </div>
+                </div>
 
-	    <!-- js -->
-	    <script src="{%static "js/jquery-2.1.3.min.js" %}"></script>
-	    <script src="{%static "js/bootstrap.min.js" %}"></script>
-	    <script src="{%static "js/pace.min.js" %}"></script>
-	    <script src="{%static "js/modernizr.custom.js" %}"></script>
-	</head>
+            </div>
+        </div>
+    </div>
+    <!--END INFO SECTION-->
+    <div class="container">
 
-	<body id="page">
-		<div class="container">
-			<header id="site-header">
+        <div class="row">
+
+            <div class="col-md-8 ">
+                <br/>
+            <center><img src="{% static "assets/img/about.jpg" %}" height="350",width="350">
+                <p><strong style="font-size: 14pt">我是谁？ 我在哪里？ 我在做什么？ 这是人类亘古不变的<a style="color: #4457ff">♂哲学♂</a>问题。------光明甘蔗</strong></p>
+                <p>在浮躁的社会，安心地做一个落后时代的人。坚持生命有它严肃的价值，坚持理想和爱。</p>
+                <p>愿我能与宏大的东西找到链接，真正感受到自身的存在和意义。</p>
+                <p>不再随波逐流，不害怕，无私无畏，活出我的精彩与真正的价值。</p>
+                <p>愿我在被打击的时，记起我的珍贵，抵抗恶意；</p>
+                <p>愿我在迷茫时，坚信我的珍贵，爱我所爱，行我所行，听从我心，无问西东。</p>
+            </center>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-3" style="padding-top: 30px;">
 				<div class="row">
-					<div class="col-md-4 col-sm-5 col-xs-8">
-						<div class="logo">
-							<h1><a href="index.html"><b>Black</b> &amp; White</a></h1>
-						</div>
-					</div><!-- col-md-4 -->
-					<div class="col-md-8 col-sm-7 col-xs-4">
-						<nav class="main-nav" role="navigation">
-							<div class="navbar-header">
-  								<button type="button" id="trigger-overlay" class="navbar-toggle">
-    								<span class="ion-navicon"></span>
-  								</button>
-							</div>
-
-							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-  								<ul class="nav navbar-nav navbar-right">
-    								<li class="cl-effect-11"><a href="/blog/" data-hover="Home">Home</a></li>
-    								<li class="cl-effect-11"><a href="/fullwidth/" data-hover="Blog">Blog</a></li>
-    								<li class="cl-effect-11"><a href="/about/" data-hover="About">About</a></li>
-    								<li class="cl-effect-11"><a href="/contact/" data-hover="Contact">Contact</a></li>
-  								</ul>
-							</div><!-- /.navbar-collapse -->
-						</nav>
-						<div id="header-search-box">
-							<a id="search-menu" href="#"><span id="search-icon" class="ion-ios-search-strong"></span></a>
-							<div id="search-form" class="search-form">
-								<form role="search" method="get" id="searchform" action="#">
-									<input type="search" placeholder="Search" required>
-									<button type="submit"><span class="ion-ios-search-strong"></span></button>
-								</form>
-							</div>
-						</div>
-					</div><!-- col-md-8 -->
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>目录</strong></li>
+                    <li class="list-group-item">PAT</li>
+                    <li class="list-group-item">蓝桥</li>
+                    <li class="list-group-item">算法</li>
+                    <li class="list-group-item">运维</li>
+                    <li class="list-group-item">人工智能</li>
+                    <li class="list-group-item">后端服务器</li>
+                    <li class="list-group-item">其他</li>
+                </ul>
+                    <p><a href="https://github.com/gyhdtc"><img src="{% static "assets/img/github.jpg" %}" width="50" height="50"/></a></p>
+                    <p><a href="http://gyhdtc.cn/weixin"><img src="{% static "assets/img/weixin.jpg" %}" width="50" height="50"/></a></p>
+                    <p><a href="https://www.liuchuo.net/" style="color: black;">PAT大佬 囧rz</a></p>
+                    <p><a href="http://fanyc.myseu.cn/" style="color: black;">腾讯大佬 囧rz</a></p>
 				</div>
-			</header>
-		</div>
+            </div>
 
-		<div class="content-body">
-			<div class="container">
-				<div class="row">
-					<main class="col-md-12">
-						<h1 class="page-title">About Me</h1>
-						<article class="post">
-							<div class="entry-content clearfix">
-								<figure class="img-responsive-center">
-									<img class="img-responsive" src="{%static "images/me.jpg"%}" alt="Developer Image">
-								</figure>
-                                <p>我是谁？ 我在哪里？ 我在做什么？ 这是人类亘古不变的<a style="color: #4457ff">♂哲学♂</a>问题。</p>
-								<p>--------尼古拉斯-霍姆金斯-甘蔗</p>
-                                <p>在浮躁的社会，安心地做一个落后时代的人。坚持生命有它严肃的价值，坚持理想和爱。</p>
-                                <p>愿我能与宏大的东西找到链接，真正感受到自身的存在和意义。不再随波逐流，不害怕，无私无畏，活出我的精彩与真正的价值。</p>
-								<p>愿我在被打击的时，记起我的珍贵，抵抗恶意；愿我在迷茫时，坚信我的珍贵，爱我所爱，行我所行，听从我心，无问西东。</p>
-                                <div class="height-40px"></div>
-								<h2 class="title text-center">Social</h2>
-								<ul class="social">
-									<p>| Wechat: gyhdtc | Email : gyh108wy@163.com | School: NCU |</p>
-								</ul>
-							</div>
-						</article>
-					</main>
-				</div>
-			</div>
-		</div>
-		<footer id="site-footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<p class="copyright">&copy; 2018 赣ICP备17017240号 --by 甘帅飞 </p>
-					</div>
-				</div>
-			</div>
-		</footer>
+        </div>
 
-		<!-- Mobile Menu -->
-		<div class="overlay overlay-hugeinc">
-			<button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
-			<nav>
-				<ul>
-					<li><a href="/blog/">Home</a></li>
-                    <li><a href="/fullwidth/">Blog</a></li>
-                    <li><a href="/about/">About</a></li>
-                    <li><a href="/contact/">Contact</a></li>
-				</ul>
-			</nav>
-		</div>
 
-		<script src="js/script.js"></script>
+    </div>
 
-	</body>
+    <!--END HOME PAGE SECTION-->
+    <div class="footer-sec" style="margin-top: 0px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 foo-inner">
+                    &copy; 2018 赣ICP备17017240号 : 甘帅飞
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END FOOTER SECTION -->
+    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME -->
+    <!-- CORE JQUERY -->
+    <script src="{% static "assets/js/jquery-1.11.1.js" %}"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="{% static "assets/js/bootstrap.js" %}"></script>
+
+</body>
 </html>

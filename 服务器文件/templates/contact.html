@@ -1,114 +1,155 @@
 <!DOCTYPE html>
 {% load static %}
 <html>
-	<head>
-		<title>:)</title>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+    <title>:)</title>
+    <!-- BOOTSTRAP CORE STYLE -->
+    <link href="{% static "assets/css/bootstrap.css" %}" rel="stylesheet" />
+    <!-- FONT AWESOME ICON STYLE -->
+    <link href="{% static "assets/css/font-awesome.css" %}" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="{% static "assets/css/style.css" %}" rel="stylesheet" />
+    <script>
+    function save(){
+            document.name.action="#";
+            document.name.submit();
+        }
+</script>
+    <style>
+        input{
+                border: 5px solid #ccc;
+                padding: 7px 0px;
+                border-radius: 3px;
+                padding-left:5px;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+                -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+                transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+            }
+            input:focus{
+                    border-color: #66afe9;
+                    outline: 0;
+                    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+                    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+            }
+</style>
+</head>
+<body>
+    <div id="header3">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 logo-div">
+                        <div class="logo-inner text-center">
+                            <div class="logo-name">
+                                <a href="blog.html">
+                                    <img src="{% static "assets/img/me.jpg" %}" class="img-circle" />
+                                </a>
+                            </div>
 
-		<!-- meta -->
-		<meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
+                        </div>
 
-	    <!-- css -->
-		<link rel="stylesheet" href="{%static "css/bootstrap.min.css" %}">
-		<link rel="stylesheet" href="{%static "css/ionicons.min.css" %}">
-		<link rel="stylesheet" href="{%static "css/pace.css" %}">
-	    <link rel="stylesheet" href="{%static "css/custom.css" %}">
+                    </div>
+                    <div class="col-md-8 header-text-top " id="about">
+                        <h1><a href="/blog/">welcome - contact</a></h1>
+						不定期更新个人日记，学习笔记。 凸^-^凸<br />
+                        <br />
+                        <strong>Do you have a questions?</strong><br/>Maybe I had answer.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END HEADER SECTION-->
+    <div class="info-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    Say hello to me at <strong>gyh108wy</strong>@163.com
+                </div>
+                <div class="col-md-2">
+                    <div class="social-link">
+                        <a href="#" class="btn btn-default btn-xs"><i class="fa fa-facebook fa-2x"></i></a>
+                        <a href="#" class="btn btn-default btn-xs"><i class="fa fa-linkedin fa-2x"></i></a>
+                        <a href="#" class="btn btn-default btn-xs"><i class="fa fa-google-plus fa-2x"></i></a>
+                    </div>
+                </div>
 
-	    <!-- js -->
-	    <script src="{%static "js/jquery-2.1.3.min.js" %}"></script>
-	    <script src="{%static "js/bootstrap.min.js" %}"></script>
-	    <script src="{%static "js/pace.min.js" %}"></script>
-	    <script src="{%static "js/modernizr.custom.js" %}"></script>
-	</head>
+            </div>
+        </div>
+    </div>
+    <!--END INFO SECTION-->
+    <div class="container">
 
-	<body id="page">
-		<div class="container">
-			<header id="site-header">
+        <div class="row">
+
+            <div class="col-md-8 ">
+                <form name="name" method="get">
+                {% csrf_token %}
+                <br/>
+                    <input type="text" name="a0" size="30" maxlength="30" placeholder="NAME"/>
+                <br/><br/>
+                    <input type="text" name="a1" size="30" maxlength="30" placeholder="EMAIL"/>
+                <br/><br/>
+                    <input type="text" name="a2" size="30" maxlength="30" placeholder="PHONE"/>
+                <br/><br/>
+                    <input type="text" name="a3" size="80" maxlength="80" placeholder="MESSAGE"/>
+                <br/><br/>
+                    <a style="font-size: 20px"><input type="checkbox"/>确保信息正确 & 无不雅留言</a>
+                <br/>
+            <input type="submit" value="SEND "/>
+        </form>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-3" style="padding-top: 30px;">
 				<div class="row">
-					<div class="col-md-4 col-sm-5 col-xs-8">
-						<div class="logo">
-							<h1><a href="index.html"><b>Black</b> &amp; White</a></h1>
-						</div>
-					</div><!-- col-md-4 -->
-					<div class="col-md-8 col-sm-7 col-xs-4">
-						<nav class="main-nav" role="navigation">
-							<div class="navbar-header">
-  								<button type="button" id="trigger-overlay" class="navbar-toggle">
-    								<span class="ion-navicon"></span>
-  								</button>
-							</div>
-
-							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-  								<ul class="nav navbar-nav navbar-right">
-    								<li class="cl-effect-11"><a href="/blog/" data-hover="Home">Home</a></li>
-    								<li class="cl-effect-11"><a href="/fullwidth/" data-hover="Blog">Blog</a></li>
-    								<li class="cl-effect-11"><a href="/about/" data-hover="About">About</a></li>
-    								<li class="cl-effect-11"><a href="/contact/" data-hover="Contact">Contact</a></li>
-  								</ul>
-							</div><!-- /.navbar-collapse -->
-						</nav>
-						<div id="header-search-box">
-							<a id="search-menu" href="#"><span id="search-icon" class="ion-ios-search-strong"></span></a>
-							<div id="search-form" class="search-form">
-								<form role="search" method="get" id="searchform" action="#">
-									<input type="search" placeholder="Search" required>
-									<button type="submit"><span class="ion-ios-search-strong"></span></button>
-								</form>
-							</div>
-						</div>
-					</div><!-- col-md-8 -->
+                <ul class="list-group">
+                    <li class="list-group-item"><strong style="color: red">目录</strong></li>
+                    <li class="list-group-item">PAT</li>
+                    <li class="list-group-item">蓝桥</li>
+                    <li class="list-group-item">算法</li>
+                    <li class="list-group-item">运维</li>
+                    <li class="list-group-item">人工智能</li>
+                    <li class="list-group-item">后端服务器</li>
+                    <li class="list-group-item">其他</li>
+                </ul>
+                    <p><a href="https://github.com/gyhdtc"><img src="{% static "assets/img/github.jpg" %}" width="50" height="50" style="border-radius: 20pt"/></a></p>
+                    <p><a href="http://gyhdtc.cn/weixin"><img src="{% static "assets/img/weixin.jpg" %}" width="50" height="50" style="border-radius: 20pt"/></a></p>
+                    <p><a href="https://www.liuchuo.net/" style="color: black;">PAT大佬 囧rz</a></p>
+                    <p><a href="http://fanyc.myseu.cn/" style="color: black;">腾讯大佬 囧rz</a></p>
+                    <p><a href="#" style="color: black;">UCSD大佬 囧rz</a></p>
 				</div>
-			</header>
-		</div>
+            </div>
 
-		<div class="content-body">
-			<div class="container">
-				<div class="row">
-					<main class="col-md-12">
-						<h1 class="page-title">Contact</h1>
-						<article class="post">
-							<div class="entry-content clearfix">
-								<form action="#" method="post" class="contact-form">
-									<div class="row">
-										<div class="col-md-6 col-md-offset-3">
-											<input type="text" name="name" placeholder="Name" required>
-											<input type="email" name="email" placeholder="Email" required>
-											<input type="text" name="subject" placeholder="Subject" required>
-											<textarea name="message" rows="7" placeholder="Your Message" required></textarea>
-											<button class="btn-send btn-5 btn-5b ion-ios-paperplane"><span>Drop Me a Line</span></button>
-										</div>
-									</div>	<!-- row -->
-								</form>
-							</div>
-						</article>
-					</main>
-				</div>
-			</div>
-		</div>
-		<footer id="site-footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<p class="copyright">&copy; 2018 赣ICP备17017240号 --by 甘帅飞 </p>
-					</div>
-				</div>
-			</div>
-		</footer>
+        </div>
 
-		<!-- Mobile Menu -->
-		<div class="overlay overlay-hugeinc">
-			<button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
-			<nav>
-				<ul>
-					<li><a href="/blog/">Home</a></li>
-                    <li><a href="/fullwidth/">Blog</a></li>
-                    <li><a href="/about/">About</a></li>
-                    <li><a href="/contact/">Contact</a></li>
-				</ul>
-			</nav>
-		</div>
 
-		<script src="js/script.js"></script>
+    </div>
 
-	</body>
+    <!--END HOME PAGE SECTION-->
+    <div class="footer-sec" style="margin-top: 0px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 foo-inner">
+                    &copy; 2018 赣ICP备17017240号 : 甘帅飞
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END FOOTER SECTION -->
+    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME -->
+    <!-- CORE JQUERY -->
+    <script src="{% static "assets/js/jquery-1.11.1.js" %}"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="{% static "assets/js/bootstrap.js" %}"></script>
+
+</body>
 </html>

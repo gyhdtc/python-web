@@ -18,9 +18,7 @@
     <orderEntry type="module" module-name="face" />
     <orderEntry type="module" module-name="个人博客模板古典系列之江南墨画" />
     <orderEntry type="module" module-name="ft5_71_story" />
-    <orderEntry type="module" module-name="btts_57_clean-blog" />
     <orderEntry type="module" module-name="twts_3_ev" />
-    <orderEntry type="module" module-name="btts_57_clean-blog" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />

@@ -1,10 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>:)</title>
-</head>
-<body>
+{% load static %}
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <title>:)</title>
+        <link rel="stylesheet" href="{% static "editor/examples/css/style.css" %}" />
+        <link rel="stylesheet" href="{% static "editor/css/editormd.css" %}" />
+        <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon" />
+    </head>
+    <script>
+    function save(){
+            document.name.action="/save/";
+            document.name.submit();
+        }
+</script>
+<style>
+        input{
+                border: 5px solid #ccc;
+                padding: 7px 0px;
+                border-radius: 3px;
+                padding-left:5px;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+                -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+                transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+            }
+            input:focus{
+                    border-color: #66afe9;
+                    outline: 0;
+                    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+                    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+            }
+            </style>
+    <body>
+    <div id="layout">
+    <form name="name" method="get">
+        {% csrf_token %}
+        <br/>
+            <center>
+            <input type="text" name="title" size="100" style="font-size: 16.5px;text-align: center" maxlength="100" placeholder="标题" value="{{ gyh1 }}"/>
+            </center>
+        <br/>
+        <div class="editormd" id="test-editormd">
+            <textarea class="editormd-html-textarea" name="blogbody" style="display:none;">
+                写点什么。。。</textarea>
+        </div>
+        <center>
+            <input type="text" name="yanzheng" style="width:300px;height:50px;" placeholder="验证码" value="{{ gyh4 }}"/>
+            <br/>
+            <input type="date" name="time" style="width:300px;height:50px;" value="{{ gyh3 }}"/>
+            <br/>
+            <a style="FONT-SIZE: 10pt;color: blue">{{ message }}</a>
+            <br/>
+            <input type="submit" value="保存 " style="width:100px;height:50px;" onclick="save()"/>
+        </center>
+        </form>
+    </div>
+        <script src="{% static "editor/examples/js/jquery.min.js"%}"></script>
+        <script src="{% static "editor/editormd.js" %}"></script>
+        <script type="text/javascript">
+			var testEditor;
 
-</body>
+            $(function() {
+                testEditor = editormd("test-editormd", {
+                    width   : "90%",
+                    height  : 640,
+                    syncScrolling : "single",
+                    path    : "{% static "editor/lib/" %}"
+                });
+
+                /*
+                // or
+                testEditor = editormd({
+                    id      : "test-editormd",
+                    width   : "90%",
+                    height  : 640,
+                    path    : "../lib/"
+                });
+                */
+            });
+        </script>
+    </body>
 </html>

@@ -19,20 +19,21 @@ from mysite import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
-    url(r'^$', views.index),
+    url(r'^$', views.blog),
     url(r'^blog/', views.blog),
     url(r'^about/', views.about),
-    url(r'^contact', views.contact),
-    url(r'^fullwidth', views.fullwidth),
-    url(r'^single', views.single),
+    url(r'^weixin/', views.weixin),
     url(r'^write', views.write),
+    url(r'^save', views.save),
+    url(r'^contact', views.contact),
+    url(r'^simple', views.simple),
     url(r'^article/([0-9]+)', views.article),
 
-    url(r'^lostpassword/', views.lost),
-    url(r'^hello/',views.hello),
-    url(r'^logup/',views.logup),
-    url(r'^login/',views.login),
-    url(r'^code/',views.code),
-    url(r'^admin/',include(admin.site.urls)),
+    # url(r'^lostpassword/', views.lost),
+    # url(r'^hello/',views.hello),
+    # url(r'^logup/',views.logup),
+    # url(r'^login/',views.login),
+    # url(r'^code/',views.code),
+    # url(r'^admin/',include(admin.site.urls)),
 ]
 urlpatterns += staticfiles_urlpatterns()
